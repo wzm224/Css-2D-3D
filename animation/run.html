@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#run{
+		width: 180px;height: 300px;
+		background: url(charector.png) 0 0 no-repeat;
+		border: 2px solid #ccc;
+		animation: run 1s infinite;
+		animation-timing-function: step-start;
+	}
+	@keyframes run{
+		0%{
+			background-position: 0 0;
+		}
+		14.3%{
+			background-position: -180px 0;
+		}
+		28.6%{
+			background-position: -360px 0;
+		}
+		42.9%{
+			background-position: -540px 0;
+		}
+		57.2%{
+			background-position: -720px 0;
+		}
+		71.5%{
+			background-position: -900px 0;
+		}
+		85.8%{
+			background-position: -1080px 0;
+		}
+		100%{
+			background-position: -720px 0;
+		}
+
+	}
+	.stop{
+		animation-play-state:paused !important;
+	}
+	.add{
+		animation-duration:0.3s !important;
+	}
+	.minus{
+		animation-duration:2s !important;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="run"></div>
+		
+		<button>暂停/开始</button>
+		<button>加速</button>
+		<button>减速</button>
+
+	</div>
+
+	<script>
+	var run = document.getElementById('run')
+	var stop = document.getElementsByTagName('button')[0]
+	var add = document.getElementsByTagName('button')[1]	
+	var minus = document.getElementsByTagName('button')[2]
+	var flog = true;
+	stop.onclick=function (argument) {
+		//alert(2)
+		if (flog) {
+			run.className="stop"
+			flog=false;
+		}else{
+			run.className=""
+			flog=true;
+		}
+		
+	}
+	add.onclick=function (argument) {
+		//alert(2)
+		run.className="add"
+	}
+	minus.onclick=function (argument) {
+		//alert(2)
+		run.className="minus"
+	}
+	</script>
+</body>
+</html>
