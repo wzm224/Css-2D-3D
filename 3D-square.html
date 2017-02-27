@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;padding: 0;
+	}
+	body{
+		perspective: 1200px;
+	}
+	#box div{
+		width: 200px;height: 200px;
+		text-align: center;line-height: 200px;
+		font-weight: border;font-size: 30px;
+		background: -webkit-radial-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.8))
+	}
+	#box2{
+		width: 250PX;height: 250PX;
+		transition: all 1s ease;
+		transform: rotateX(-45deg) rotateY(-45deg);
+		margin: 15% auto;border: none;
+		background: red;font-size: 100px;
+		transform-style:preserve-3d;
+		text-align: center;line-height: 200px;
+	}
+	#box{
+		width: 200PX;height: 200PX;
+		transition: all 1s ease;
+		transform: rotateX(-45deg) rotateY(-45deg);
+		margin: 15% auto;border: none;
+		background: red;
+		transform-style:preserve-3d;
+	}
+	#box:hover{
+		transition: all 1s ease;
+		transform: rotateX(145deg) rotateY(145deg);
+	}
+	.face1{
+		position: absolute;
+		transform: translateX(100px)
+		rotateY(90deg)
+	}
+	.face2{
+		position: absolute;
+		transform: translateX(-100px)
+		rotateY(90deg)
+	}	
+	.face3{
+		position: absolute;
+		transform:translateY(-100px) 
+		rotateX(90deg)
+	}	
+	.face4{
+		position: absolute;
+		transform:translateY(100px) 
+		rotateX(90deg)
+	}	
+	.face5{
+		position: absolute;
+		transform:translateZ(100px)
+	}	
+		
+	.face6{
+		position: absolute;
+		transform:translateZ(-100px)
+	}
+		
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="face1">1</div>
+		<div class="face2">2</div>
+		<div class="face3">3</div>
+		<div class="face4">4</div>
+		<div class="face5">5</div>
+		<div class="face6">6</div>
+	</div>
+	<div id="box2">正</div>
+</body>
+</html>

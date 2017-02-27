@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;margin: 0;
+		}
+		body{
+			perspective: 1200px;
+		}
+		#box{
+			width: 250PX;height: 250PX;
+			transition: all 1s ease;
+			margin: 30% auto;border: none;
+			background: red;font-size: 30px;
+			transform-style:preserve-3d;
+			text-align: center;line-height: 200px;	
+			transform: rotateX(45deg);	
+		}
+		#box:hover{
+			width: 250PX;height: 250PX;
+			transition: all 1s ease;
+			margin: 30% auto;border: none;
+			background: red;font-size: 30px;
+			transform-style:preserve-3d;
+			text-align: center;line-height: 200px;	
+			transform: rotateX(-45deg) rotateY(-45deg);	
+		}
+
+		
+		.face1{
+		    width: 0;
+		    height: 0;
+		    border-left: 125px solid transparent;
+		    border-right: 125px solid transparent;
+		    border-top: 300px solid pink;opacity: 0.6;
+		    position: absolute;	top:250px;	
+		    transform-origin:top;
+		    transform: rotateX(115deg)
+
+		}
+		.face2{
+		    width: 0;
+		    height: 0;
+		    border-left: 125px solid transparent;
+		    border-right: 125px solid transparent;
+		    border-bottom: 300px solid green;opacity: 0.6;
+		    position: absolute;	top:-300px;	
+		    transform-origin:bottom;
+		    transform: rotateX(-115deg)		    
+		}
+
+		.face3{
+			width: 250px;height: 250px;
+			position: absolute;
+		}
+		.face4{
+		    width: 0;
+		    height: 0;
+		    border-bottom: 125px solid transparent;
+		    border-top: 125px solid transparent;
+		    border-left: 300px solid blue;opacity: 0.6;
+		    position: absolute;left: 250px;			
+		    transform-origin:left;
+		    transform: rotateY(-115deg)		    
+		}
+		.face5{
+		    width: 0;
+		    height: 0;
+		    border-top: 125px solid transparent;
+		    border-bottom: 125px solid transparent;
+		    border-right: 300px solid #ccc;opacity: 0.6;
+		    position: absolute;	left: -300px;		
+		    transform-origin:right;
+		    transform: rotateY(115deg)		    
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="face1"></div>
+		<div class="face2"></div>
+		<div class="face3"></div>
+		<div class="face4"></div>
+		<div class="face5"></div>
+	</div>
+</body>
+</html>
